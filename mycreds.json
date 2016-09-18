@@ -1,4 +1,3 @@
-
 {
   "credentials": {
     "peers": [
@@ -201,5 +200,3 @@
     "cert": "https://blockchain-certs.mybluemix.net/us.blockchain.ibm.com.cert"
   }
 }
-
-
