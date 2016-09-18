@@ -17,7 +17,10 @@ $(document).on('ready', function() {
 	$('#submit').click(function(){
 		var obj = 	{
 						type: 'create',
-						name: $('input[name="name"]').val().replace(' ', ''),
+						name: $('input[name="cname"]').val().replace(' ', ''),
+						//Karthik changes-Start
+						risk: $('input[name="risk"]').val().replace(' ', ''),
+						//Karthik changes-end
 						color: $('.colorSelected').attr('color'),
 						size: $('select[name="size"]').val(),
 						user: $('select[name="user"]').val(),
@@ -25,6 +28,9 @@ $(document).on('ready', function() {
 					};
 		if(obj.user && obj.name && obj.color){
 			console.log('creating marble, sending', obj);
+			//Karthik changes-Start
+			alert("JSON.stringify(obj)" + JSON.stringify(obj));
+			//Karthik changes-end
 			ws.send(JSON.stringify(obj));
 			$('.panel').hide();
 			$('#homePanel').show();
