@@ -17,9 +17,9 @@ $(document).on('ready', function() {
 	$('#submit').click(function(){
 		var obj = 	{
 						type: 'create',
-						name: $('input[name="cname"]').val().replace(' ', ''),
+						name: $('input[name="name"]').val().replace(' ', ''),
 						//Karthik changes-Start
-						risk: $('input[name="risk"]').val().replace(' ', ''),
+						//risk: $('input[name="risk"]').val().replace(' ', ''),
 						//Karthik changes-end
 						color: $('.colorSelected').attr('color'),
 						size: $('select[name="size"]').val(),
