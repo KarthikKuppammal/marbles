@@ -1,16 +1,24 @@
 #createPanel(hidden).panel
-	h1 Create Marble
+	h1 Create Fac Slip
 	hr
 	
 	#innerWrap
-		span.createball
+		//span.createball
 		
 		form(action="/create" method="POST")#createform
+		//Karthik changes-Start
 			legend 
-				input(type="text" name="name" placeholder="What is Your Marble")
-				span.hint &nbsp;&nbsp;RANDOM OR CUSTOM STRING
+				input(type="text" name="cname")
+				span.hint &nbsp;&nbsp;CEDEING COMPANY
 			
 			br
+			
+			legend 
+				input(type="text" name="risk")
+				span.hint &nbsp;&nbsp;RISK EXPOSURE
+			
+			br
+			//Karthik changes-stop
 			legend
 				include ./template/color_options.jade
 				
@@ -19,7 +27,7 @@
 				select(name="size")
 					option(value="35" disabled="disabled" selected="selected") Size
 					option(value="35") Large
-					option(value="16") Small
+					option(value="16") Medium
 			br
 			legend 
 				select(name="user")
